@@ -1,0 +1,704 @@
+"edersoares","MEMBER","","2024-08-21T19:24:51Z",false,"APPROVED"
+"edersoares","MEMBER","","2024-06-24T20:31:06Z",false,"APPROVED"
+"edersoares","MEMBER","","2024-06-24T14:22:30Z",false,"APPROVED"
+"edersoares","MEMBER","","2024-06-20T18:46:06Z",false,"APPROVED"
+"edersoares","MEMBER","","2024-06-18T17:06:50Z",false,"APPROVED"
+"edersoares","MEMBER","Obrigado pela contribuição @lucassch ","2024-04-19T18:24:30Z",false,"APPROVED"
+"edersoares","MEMBER","","2024-02-20T12:23:58Z",false,"APPROVED"
+"edersoares","MEMBER","Boa @jrbarros!
+
+Antes de seguirmos quero trazer uma ideia para discussão, adicionar eventos é tranquilamente viável, pois não impactará negativamente o i-Educar, meu ponto é que talvez isso não se torne escalável com o tempo.
+
+Minha sugestão é utilizarmos [Observers](https://laravel.com/docs/10.x/eloquent#observers) para que ao invés de sempre tornar explícito o disparo de um evento, o próprio Laravel o faça através do uso padrão das models.
+
+O porém, é que ao invés de nós adicionarmos eventos ao código, nós precisamos refatorar o código legado para ao invés de usar `clsBanco` utilize o próprio model do Laravel, assim automaticamente já temos disponível os eventos que o model dispara.
+
+No seu pacote, você adicionaria no seu ServiceProvider algo como:
+
+```php
+public function boot(): void
+{
+    LegacyStudent::observe(LegacyStudentObserver::class);
+}
+```
+
+Assim o software se torna mais extensível sem depender de sempre termos que modificar o código fonte do i-Educar e consequentemente utilizamos os esforços em prol da refatoração do código legado.
+
+O que acham disso?","2023-09-18T16:48:43Z",false,"COMMENTED"
+"edersoares","MEMBER","","2023-09-21T14:19:39Z",false,"APPROVED"
+"edersoares","MEMBER","","2023-11-23T12:22:16Z",false,"APPROVED"
+"edersoares","MEMBER","","2023-03-15T11:35:58Z",false,"APPROVED"
+"edersoares","MEMBER","","2023-02-13T18:48:20Z",false,"APPROVED"
+"edersoares","MEMBER","","2023-03-10T17:10:14Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2023-01-23T13:02:02Z",false,"APPROVED"
+"edersoares","MEMBER","","2023-01-06T12:13:55Z",false,"APPROVED"
+"edersoares","MEMBER","","2023-01-03T19:48:33Z",false,"APPROVED"
+"edersoares","MEMBER","@marcosoliveirasoares94 obrigado pela contribuição.
+
+A gente entende que arquivos em branco muitas vezes dificultam o entendimento de pessoas não tão técnicas, então sugiro mantermos o mais simples possível. Porém compreendi bem a sua contribuição e acredito que poderíamos fazer uma documentação e linkar no README do projeto, o que acha?","2022-12-26T12:45:50Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2022-12-30T14:52:41Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2022-12-30T14:53:56Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-01-27T15:01:28Z",false,"COMMENTED"
+"tiagocamargo","MEMBER","","2023-02-06T12:46:58Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-02-06T14:14:51Z",false,"COMMENTED"
+"edersoares","MEMBER","O ambiente de desenvolvimento ou de uso por cada usuário deve ser agnóstico e não haver configurações pré-definidas para itens específicos, como por exemplo certificados, locale e outros.
+
+Se for preciso, o desenvolvedor precisa customizar sua instalação para isso, o projeto tem que fornecer o básico para o funcionamento.
+
+Queremos dar manutenção a nível de código e não de servidor, as configurações específicas para servidores menores funcionam de forma diferente de servidores maiores, então é de responsabilidade do dev/infra saber o que é melhor para cada um.
+
+Obrigado pela contribuição @marcosoliveirasoares94, acredito que levantou excelentes pontos para discutirmos.","2023-03-22T18:23:44Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T13:21:34Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T13:26:39Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T13:38:31Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T13:58:09Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T14:01:32Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T14:04:16Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T14:04:59Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T14:05:15Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T14:06:54Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-23T14:07:04Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-24T18:54:03Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-24T18:56:32Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-24T19:14:50Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2023-03-24T19:16:20Z",false,"COMMENTED"
+"edersoares","MEMBER","","2022-12-13T18:27:46Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-06-26T18:18:01Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-06-26T18:17:43Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-06-26T19:14:16Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2022-06-26T19:36:43Z",false,"COMMENTED"
+"edersoares","MEMBER","","2022-06-26T19:48:27Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-06-26T18:02:01Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-05-11T23:15:26Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-04-29T18:49:25Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-04-29T17:11:43Z",false,"APPROVED"
+"jrbarros","CONTRIBUTOR","","2022-04-29T13:55:56Z",false,"APPROVED"
+"jrbarros","CONTRIBUTOR","🥳    🚀 ","2022-04-29T13:35:59Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-03-30T12:04:53Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-02-14T21:24:57Z",false,"APPROVED"
+"jrbarros","CONTRIBUTOR","","2022-02-02T13:31:51Z",false,"APPROVED"
+"edersoares","MEMBER","","2022-01-17T12:06:09Z",false,"APPROVED"
+"jrbarros","CONTRIBUTOR","Obrigado pela contribuição. :D ","2022-01-03T10:11:34Z",false,"APPROVED"
+"edersoares","MEMBER","","2021-12-30T11:58:59Z",false,"COMMENTED"
+"gilcimartec","NONE","","2022-01-03T20:05:47Z",false,"COMMENTED"
+"edersoares","MEMBER","","2021-12-13T17:21:09Z",false,"APPROVED"
+"edersoares","MEMBER","Obrigado @marcosoliveirasoares94.","2021-12-11T17:43:19Z",false,"APPROVED"
+"edersoares","MEMBER","@tiagocamargo o que você acha dos valores de configuração?","2021-08-31T21:45:19Z",false,"CHANGES_REQUESTED"
+"msoares94","CONTRIBUTOR","","2021-08-31T21:52:26Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-08-31T21:54:32Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-09-01T14:09:05Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-09-02T15:33:06Z",false,"COMMENTED"
+"edersoares","MEMBER","Gostando do rumo que isso está tomando, porém isso vai quebrar a forma como é utilizado o sistema, então ele é candidato para a versão 2.7.","2021-09-10T14:06:37Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2021-09-10T14:07:59Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-09-10T14:11:37Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-09-10T14:12:57Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-09-13T12:07:42Z",false,"COMMENTED"
+"edersoares","MEMBER","","2021-07-29T12:35:29Z",false,"APPROVED"
+"edersoares","MEMBER","","2021-07-20T12:08:48Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2021-07-20T13:45:45Z",false,"APPROVED"
+"edersoares","MEMBER","@marcosoliveirasoares94 obrigado pela contribuição, se possível fazer os ajustes para fazermos o merge o/","2021-07-08T23:49:48Z",false,"CHANGES_REQUESTED"
+"msoares94","CONTRIBUTOR","","2021-07-09T18:55:04Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-07-09T18:56:03Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-07-09T18:56:20Z",false,"COMMENTED"
+"msoares94","CONTRIBUTOR","","2021-07-09T18:59:46Z",false,"COMMENTED"
+"edersoares","MEMBER","","2021-07-09T20:36:03Z",false,"APPROVED"
+"edersoares","MEMBER","","2021-07-12T21:34:56Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2021-07-12T21:59:32Z",false,"APPROVED"
+"edersoares","MEMBER","","2021-01-18T21:40:29Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-12-22T02:28:01Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2020-11-30T12:50:12Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-08-10T12:25:13Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-08-06T14:48:17Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-08-01T14:56:27Z",false,"APPROVED"
+"Bonot","CONTRIBUTOR","","2020-07-31T19:21:20Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-07-31T19:21:33Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-07-27T12:46:42Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-07-20T18:53:16Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-07-10T20:35:48Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-07-06T13:36:45Z",false,"APPROVED"
+"Bonot","CONTRIBUTOR","","2020-06-29T12:19:52Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-06-22T18:52:06Z",false,"APPROVED"
+"edersoares","MEMBER","","2020-06-15T21:20:29Z",false,"APPROVED"
+"MatheusNicoski","CONTRIBUTOR","","2020-03-17T12:22:49Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2020-01-03T18:10:23Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-12-12T12:29:51Z",false,"APPROVED"
+"Bonot","CONTRIBUTOR","","2019-12-02T13:50:17Z",false,"APPROVED"
+"tiagocamargo","MEMBER","Aprovado.","2019-11-20T12:22:22Z",false,"APPROVED"
+"edersoares","MEMBER","Obrigado pelo PR @thiagobfiorenza.","2019-10-21T13:50:08Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","Boa @thiagobfiorenza! ","2019-10-21T19:50:28Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-10-21T19:02:46Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","Muto bom @vanildosouto 
+
+Só vamos precisar documentar em algum lugar que vai ser necessário rodar um `php artisan legacy:link`. Talvez na release @edersoares :wink: ","2019-10-21T19:48:03Z",false,"APPROVED"
+"geekcom","NONE","","2019-10-02T18:50:40Z",false,"COMMENTED"
+"MatheusNicoski","CONTRIBUTOR","","2019-10-03T18:11:57Z",false,"COMMENTED"
+"edersoares","MEMBER","","2019-10-09T17:33:23Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-10-09T17:34:05Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2019-08-19T17:44:45Z",false,"APPROVED"
+"edersoares","MEMBER","@jbsn94 concordo, PR aceito.","2019-08-09T12:32:05Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-08-09T12:31:43Z",false,"APPROVED"
+"MatheusNicoski","CONTRIBUTOR","","2019-07-10T17:14:55Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2019-06-21T16:44:19Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-06-08T02:00:45Z",false,"COMMENTED"
+"edersoares","MEMBER","","2019-06-08T15:05:49Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2019-06-09T03:58:05Z",false,"APPROVED"
+"edersoares","MEMBER","@rsdevigo simplesmente uma excelente contribuição! 
+
+Já estava para desenvolvermos a algum tempo, mas a contribuição partir da comunidade é algo simplesmente sensacional.
+
+Em resumo fiz alguns comentários pontuais visando manter um pouco mais o padrão Laravel para nós aproveitarmos a documentação do mesmo.
+
+Eu prefiro a abordagem que utiliza local storage, pois assim não é necessário outros usuários entenderem e configurar mais uma tecnologia, estamos tendo muitas dificuldades com isso. Assim quero saber o teu ponto de visto quando a removermos o `MinIO Server` e criarmos um tutorial de como fazer a instalação, o que acha?
+
+No mais, ficou excelente, já fiz testes locais e funcionou certinho. Assim que fizer as alterações, iremos colocar no nosso servidor de homologação.
+
+Obrigado, abração!
+
+","2019-06-10T21:11:04Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","@rsdevigo os testes passaram, apenas tem que adicionar o código que comentei para separar os tenants.
+
+Remover o tutorial de upload.","2019-06-21T13:05:01Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","","2019-05-31T14:23:15Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-05-27T13:17:04Z",false,"APPROVED"
+"MatheusNicoski","CONTRIBUTOR","","2019-05-22T19:23:16Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-05-22T19:48:48Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-05-22T19:43:35Z",false,"APPROVED"
+"lucassch","CONTRIBUTOR","","2019-05-17T16:52:58Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2019-05-14T17:02:49Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-05-14T17:20:52Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-05-07T16:19:47Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-04-26T16:17:58Z",false,"APPROVED"
+"edersoares","MEMBER","Mudanças solicitadas no comentário anterior.","2019-04-22T01:02:12Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2019-05-08T02:12:45Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-04-15T19:07:09Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-04-08T12:14:24Z",false,"APPROVED"
+"edersoares","MEMBER","Obrigado, @ithaloleal! Esperamos mais contribuições 😄 ","2019-03-29T14:27:40Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-03-27T18:28:51Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-03-16T00:49:26Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-03-11T16:44:20Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-03-11T16:44:48Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-03-11T16:42:59Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-03-11T16:45:51Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-03-01T18:32:02Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-02-28T04:41:11Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-02-08T13:42:13Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-02-07T17:12:36Z",false,"APPROVED"
+"leandrofinger","NONE","LGTM","2019-04-03T17:33:41Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-04-08T00:15:41Z",false,"APPROVED"
+"edersoares","MEMBER","Obrigado @robertoarruda.","2019-02-05T12:26:54Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-01-29T18:57:29Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-02-21T17:17:31Z",false,"COMMENTED"
+"edersoares","MEMBER","","2019-02-21T20:18:35Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","Show @edersoares! 
+Rodei tudo de boa aqui
+
+:star2:  pra você","2019-03-01T14:29:24Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2019-01-22T18:02:26Z",false,"APPROVED"
+"edersoares","MEMBER","@vitormattos ficou ótima a organização!
+
+Dois pontos:
+
+- Questão de auditoria e sessão, o i-Educar tem um grande problema que a sessão é fechada em várias partes do sistema, sendo assim a variável global `$_SESSION` não existe em todo contexto, atentar para este fato.
+- Porque você fez o `unset($_GET['etapa']);` nos testes, estava gerando problemas, só pra eu entender.","2019-01-07T20:50:40Z",false,"CHANGES_REQUESTED"
+"vitormattos","CONTRIBUTOR","","2019-01-16T15:59:53Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2019-01-16T16:03:10Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2019-01-16T16:04:49Z",false,"COMMENTED"
+"edersoares","MEMBER","","2019-01-21T17:57:02Z",false,"APPROVED"
+"edersoares","MEMBER","Dei algumas sugestões para simplificarmos um pouco mais a utilização do provider DatabaseServiceProvider com o intuito de removermos ele futuramente em prol de trabalharmos com migrations e transações nos testes automatizados, assim não dependeremos do conteúdo do banco.
+
+Ficou ótimo o mock do banco.
+
+Vamos testar internamente as modificações para analisar possíveis impactos.","2019-01-07T20:58:34Z",false,"CHANGES_REQUESTED"
+"vitormattos","CONTRIBUTOR","","2019-01-16T15:54:46Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2019-01-16T15:55:38Z",false,"COMMENTED"
+"edersoares","MEMBER","","2019-01-21T18:02:06Z",false,"COMMENTED"
+"edersoares","MEMBER","","2019-01-21T18:04:59Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2019-01-21T18:05:38Z",false,"COMMENTED"
+"edersoares","MEMBER","Entrará no fluxo de QA.","2019-01-22T18:02:23Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2019-02-06T01:00:12Z",false,"APPROVED"
+"edersoares","MEMBER","","2019-01-02T11:16:44Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2019-01-03T10:28:31Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-12-27T20:39:48Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-12-27T12:50:06Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2018-12-26T11:48:29Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-12-21T21:47:01Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2018-12-21T22:26:12Z",false,"COMMENTED"
+"edersoares","MEMBER","Pequenas mudanças para limpar o código. 
+
+Sempre que possível usar definição de array compacta `[]` e constantes como `true`, `false` e `null` em minúsculo para seguir a PSR-2.
+
+Está ótimo, muitos testes foram restaurados.
+
+Aqui localmente houve estouro de memória do PHPUnit ao executar os testes, excedeu 32MB padrão:
+
+<img width=""576"" alt=""screen shot 2018-12-26 at 23 14 31"" src=""https://user-images.githubusercontent.com/957395/50461220-0c583e00-0964-11e9-8a41-6b28032c93e1.png"">
+
+Se conseguir encontrar o teste que está ""comendo"" memória seria legal, senão adicionar ao `phpunit.xml`:
+
+```xml
+<ini name=""memory_limit"" value=""256M"" />
+```
+
+Fiz o merge com o PR #472 e funcionou certinho os dois juntos, estamos seguindo bem.
+
+Após os ajustes, podemos mesclar, já que basicamente apenas testes foram mexidos.
+
+Ótimo trabalho!","2018-12-27T01:18:54Z",false,"CHANGES_REQUESTED"
+"vitormattos","CONTRIBUTOR","","2018-12-27T01:41:17Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2018-12-27T01:41:22Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2018-12-27T01:41:49Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2018-12-27T01:41:53Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2018-12-27T01:45:21Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-12-27T02:20:17Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-12-28T11:36:03Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2018-12-21T17:14:39Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2018-12-21T15:19:48Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-11-29T16:12:59Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Acredito que tem um commit que não deveria fazer parte deste PR, gentileza averiguar
+
+Commit https://github.com/portabilis/i-educar/pull/463/commits/66013f390d7f299be9aa574aa9f6c58e90ed2fae","2018-11-19T12:43:49Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Atualizar para o master (leia-se conflitos)","2018-12-17T13:36:59Z",false,"COMMENTED"
+"edersoares","MEMBER","Todas as modificações estão OK e rodaram normalmente no meu ambiente local, vou colocar para homologação interna, mas o PR já está aprovado.","2018-12-26T23:57:13Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Atualizar para o master","2018-12-17T13:35:54Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-12-17T15:44:34Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Atualizar para o master (leia-se conflitos)","2018-12-17T13:35:16Z",false,"COMMENTED"
+"edersoares","MEMBER","Somente modificar o namespace, o teste continua passando com a alteração 😄 ","2018-12-17T15:48:40Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-12-17T16:10:07Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-12-18T03:42:39Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-11-10T11:40:20Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-11-12T11:57:09Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-11-09T15:57:36Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-11-07T12:11:43Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-10-29T14:53:52Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-10-24T23:51:09Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-31T12:45:54Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","Olá @leonampd 
+
+Pode remover os conflitos, pra que possamos fazer o merge?
+
+Obrigado pela contribuição!","2018-10-25T02:42:19Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","Pequenos ajustes de código que o cs fixer não pega sozinho.","2018-10-27T14:26:48Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2018-12-27T01:48:57Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","Olá @jashk. Obrigado pela contribuição!
+
+Conforme descrito na issue, a ideia é remover os blocos referente a licença, pois já temos um arquivo pra isso.
+
+Pode ajustar isso, por favor?","2018-10-21T13:40:26Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","Olá @jashk. Obrigado pela contribuição!
+
+Conforme descrito na issue, a ideia é remover os blocos referente a licença, pois já temos um arquivo pra isso.
+
+Pode ajustar isso, por favor?","2018-10-21T13:39:31Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","","2018-10-11T01:54:50Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","Não entendi a alteração. O serviço não estava funcionando como esperado?
+
+[Edit] Agora li a descrição do PR. Entendi a motivação :)","2018-10-11T14:07:31Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-10-11T14:08:32Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-11T01:55:41Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-10T14:25:34Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","Obrigado pela contribuição, @diegoocezar! 
+
+Só peço que você coloque uma breve descrição do que foi feito, como os colegas já falaram
+","2018-10-21T13:35:29Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","Olá @diegoocezar, obrigado pela contribuição!
+
+Conforme falamos na issue #424, a ideia é remover os blocos de comentários referentes a licença do software.
+Tem também um conflito a ser resolvido
+Pode ajustar isso, por favor?
+
+Ah, não se esqueça de colocar também uma descrição do que foi feito no PR (você pode editar a descrição)","2018-10-21T13:32:58Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","Olá @diegoocezar, obrigado pela contribuição!
+
+Conforme falamos na issue #424, a ideia é remover os blocos de comentários referentes a licença do software.
+Pode ajustar isso, por favor?
+
+Ah, não se esqueça de colocar também uma descrição do que foi feito no PR  ","2018-10-21T13:29:40Z",false,"CHANGES_REQUESTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-10-17T17:18:40Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-21T19:31:41Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-10-17T17:20:29Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-10-17T17:14:39Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-25T02:25:36Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-10-25T13:35:28Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-10-31T12:31:46Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-12-18T04:10:38Z",false,"CHANGES_REQUESTED"
+"vitormattos","CONTRIBUTOR","","2018-12-18T15:34:06Z",false,"COMMENTED"
+"edersoares","MEMBER","O código está OK, porém por tratar de mudanças em uma classe utilizada em todo o sistema, será necessário a validação de um QA para garantir que não houve quebras no sistema.","2018-12-18T17:34:07Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-21T13:22:06Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-08T16:43:17Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","Olá @jashk. Obrigado pela contribuição!
+
+Conforme descrito na issue, a ideia é remover os blocos referente a licença, pois já temos um arquivo pra isso.
+Outro detalhe que notei é que você removeu o arquivo `.php_cs`, acredito que isso tenha feito com que alguns ajustes ficassem diferentes do esperado.
+
+Pode ajustar esses pontos, por favor?","2018-10-21T12:59:07Z",false,"CHANGES_REQUESTED"
+"jashk","NONE","revert deleted .php_cs file","2018-10-23T03:52:49Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-10-07T18:49:21Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-10T17:18:01Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-05T18:45:11Z",false,"APPROVED"
+"MatheusNicoski","CONTRIBUTOR","","2018-10-05T18:45:16Z",false,"APPROVED"
+"MatheusNicoski","CONTRIBUTOR","","2018-10-05T18:36:27Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2018-10-05T18:41:04Z",false,"APPROVED"
+"Bonot","CONTRIBUTOR","","2018-10-05T18:42:40Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-21T12:44:01Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-10-05T17:56:46Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-10-03T23:25:48Z",false,"COMMENTED"
+"victorhsanjos","CONTRIBUTOR","","2018-10-04T00:19:41Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-10-04T01:23:56Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-10-05T11:26:09Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","Obrigado pela contribuição @jashk 
+
+Conforme o Eber falou, seria interessante adicionar mais arquivos a esse PR","2018-10-25T02:19:40Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","Solicito review commit a commit","2018-10-03T23:06:06Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-09-26T15:52:26Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-09-26T17:15:24Z",false,"COMMENTED"
+"rodrigogbgod","CONTRIBUTOR","","2018-09-27T13:52:02Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2018-09-27T14:19:58Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-09-28T14:26:25Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-09-19T21:01:43Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-09-26T18:11:06Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-09-26T20:00:04Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-09-04T14:56:07Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-08-28T20:12:57Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-08-28T19:12:38Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-08-27T21:19:15Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-11-07T16:20:01Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-11-07T18:04:44Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-11-08T16:19:37Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-11-08T16:25:59Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-11-30T22:13:53Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-08-14T21:52:43Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Quero lembrar que este PR atende para desenvolvimento.","2018-08-12T14:53:07Z",false,"COMMENTED"
+"edersoares","MEMBER","@vitormattos, ainda teremos que amadurecer a ideia.
+
+Hoje o serviço de relatórios está embutido na imagem `ieducar_1604`, ele é utilizado através do `openjdk` e precisaremos mantê-lo de alguma forma para que seja possível continuar emitindo os relatórios.
+
+Mas em resumo, gostei de isolar cada serviço.
+
+Esperar o @munizeverton e @eberfreitas deixar suas opiniões.
+
+A ideia é fazermos um tutorial para criar um arquivo `docker-compose.override.yml` para que cada desenvolvedor possa controlar melhor o seu próprio ambiente.","2018-08-14T16:44:07Z",false,"CHANGES_REQUESTED"
+"vitormattos","CONTRIBUTOR","","2018-08-17T15:42:43Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-08-13T11:54:27Z",false,"APPROVED"
+"edersoares","MEMBER","@farribeiro faz sentido remover da análise as bibliotecas JavaScript de terceiros.
+
+Pode fazer estas alterações apenas em um commit e indentar o arquivo .yml em 2 espaços, por favor.","2018-08-10T20:33:30Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","Feito","2018-08-10T23:28:14Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-08-14T17:00:00Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Quero lembrar que este PR atende para produção. Gostaria que @vitormattos validasse as dependencias deste meus Dockerfile","2018-08-12T14:52:26Z",false,"COMMENTED"
+"MatheusNicoski","CONTRIBUTOR","","2018-08-10T19:06:58Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-09-05T11:34:19Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-08-10T12:45:03Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2018-08-14T17:17:49Z",false,"APPROVED"
+"vinicelms","CONTRIBUTOR","A contribuição ficou muito boa! Parabéns!
+
+Só vejo uma alteração simples, só para não atrapalhar na acessibilidade.","2018-08-10T20:37:40Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-08-10T20:41:44Z",false,"COMMENTED"
+"vinicelms","CONTRIBUTOR","","2018-08-10T20:45:38Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","🔝 ","2018-08-09T12:39:29Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-08-09T12:43:21Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-08-07T16:44:04Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-08-08T01:58:19Z",false,"APPROVED"
+"edersoares","MEMBER","Ótima contribuição, assim sempre teremos a versão mais atual do Composer :)","2018-08-10T17:25:36Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2018-08-10T17:28:39Z",false,"CHANGES_REQUESTED"
+"vitormattos","CONTRIBUTOR","","2018-08-10T19:55:26Z",false,"COMMENTED"
+"vitormattos","CONTRIBUTOR","","2018-08-10T19:58:20Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-08-10T20:03:46Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-08-10T20:04:20Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-27T04:56:47Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-07-27T13:15:38Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-08-09T03:32:53Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","> Porque? Gostaria de analisar o código?
+
+Eu analisei, e notei que o código PHP estava fracamente tipado, somente isso.","2018-07-23T20:33:30Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-25T20:15:30Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-07-19T13:15:55Z",false,"APPROVED"
+"munizeverton","CONTRIBUTOR","","2018-07-18T17:36:46Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-25T20:16:05Z",false,"APPROVED"
+"rodrigogbgod","CONTRIBUTOR","","2018-07-16T19:06:43Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-16T19:55:34Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-16T19:52:11Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-16T19:50:11Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-07-13T17:25:32Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-07-12T16:46:46Z",false,"APPROVED"
+"fernandosjp","CONTRIBUTOR","","2018-07-11T22:22:30Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-11T19:06:15Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","","2018-07-12T13:15:06Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-07-12T13:58:28Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-07-13T17:21:04Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-07-14T15:53:23Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-07-10T12:51:34Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","boa, só testar o/","2018-07-13T17:17:12Z",false,"APPROVED"
+"fernandosjp","CONTRIBUTOR","@eberfreitas ou @MarceloCajueiro conseguimos colocar no ar já a primeira versão do site. O @rodrigodevigo ainda esta trabalhando em mais ajustes para termos pronto para o FISL.","2018-07-09T16:07:04Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-07-09T18:15:14Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","Ficou show!","2018-07-04T18:10:29Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","Oi @fernandosjp. Achei que as perguntas e respostas ficaram um pouco sem contexto, então vou propor alguns ajustes:
+
+```
+### Qual é o modelo de governança do i-Educar?
+
+Atualmente o projeto é mantido pela [Portabilis](http://www.portabilis.com.br/), empresa que fornece serviços de implantação, implementação e manutenção do i-Educar em dezenas de municípios espalhados pelo Brasil. A Portabilis também é responsável pela grande maioria dos commits no projeto, colaborando com novos recursos, correção de bugs, etc.
+
+Apesar do i-Educar já existir como código aberto a muitos anos, sua estruturação como um projeto open-source ativo é algo recente e por isso ainda não existe um modelo de governança estabelecido. Por hora a Portabilis e seus membros e parceiros são responsáveis pela definição do roadmap, moderação das discussões e aplicação de patches. Esperamos contar cada vez mais com a participação da comunidade nestes aspectos.
+
+### Como ajudar o i-Educar a ter um fluxo de trabalho mais aberto e transparente em comunidade?
+
+Recentemente a Portabilis se dispôs a trabalhar diretamente com o i-Educar em comunidade. Por causa disto foi feita uma contribuição imensa de melhorias e recursos ao projeto dando origem à versão 2.0 do sistema. Melhorias estas que antes vinham sendo desenvolvidas em um fork interno. Sendo assim, a própria mantenedora ainda está em processo de se adequar a esta nova forma de trabalho e o fluxo ainda precisa de ajustes.
+
+Foi proposto um [roadmap](https://github.com/portabilis/i-educar/projects/3) e nosso foco tem sido em executá-lo, de forma que o melhor jeito de ajudar é se engajando de forma mais incisiva naquilo que é prioritário de acordo com o próprio roadmap. Aos poucos vamos ajustando nossos fluxos de trabalho para que sejam totalmente transparentes e contamos com o auxílio e paciência de todos os membros da comunidade durante este processo.
+
+### Seria possivel incluir algum membro de comunidade na administração do projeto?
+
+Antes de tudo é importante deixar claro que a Portabilis, na forma de pessoas que trabalham ativamente no i-Educar, é um membro da comunidade como qualquer outro. Um membro que contribuiu com mais de 10.000 commits em melhorias e bug fixes, incluindo o censo escolar que é revolucionário para gestão escolar. Acreditamos que com este trabalho a Portabilis mereceu seu posicionamento como mantenedora do projeto.
+
+Da mesma forma acreditamos que qualquer outro membro da comunidade que possa vir a se tornar administrador do projeto deva merecer esta posição, ou seja, não iremos indicar um segundo ou terceiro membro da comunidade para administração por uma questão meramente política, mas sim por uma questão prática de envolvimento e dedicação ao projeto.
+
+De qualquer forma, esperamos que o engajamento de qualquer pessoa na comunidade não dependa da possibilidade de se obter títulos ou posições dentro do projeto.
+```
+
+Adicionei esta primeira pergunta pra dar um pouco mais de contexto às outras questões. Também mudei um pouco o fraseamento e estrutura das outras respostas pra tentar esclarecer o que tá sendo colocado.
+
+É só uma sugestão então sinta-se livre para ajustar ou não :)","2018-07-04T16:15:11Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","","2018-07-04T16:34:52Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-07-04T21:27:39Z",false,"COMMENTED"
+"edersoares","MEMBER","Code Sniffer aplicado com sucesso. Minha dúvida fica se não seria interessante removermos já a pasta `_tests`?","2018-07-04T14:18:57Z",false,"APPROVED"
+"fernandosjp","CONTRIBUTOR","@MarceloCajueiro Será que precisa adicionar algumas pastas no `.gitignore`? Estou tomando como referencia esse projeto que usa o Docusaurus https://github.com/prettier/prettier/blob/master/.gitignore","2018-07-03T20:06:46Z",false,"COMMENTED"
+"fernandosjp","CONTRIBUTOR","@MarceloCajueiro para fechar precisa configurar o GitHub Pages, certo? 
+
+@vinicelms acho que vale você bater o olho só para ver se está tudo certinho e ajudar caso o @MarceloCajueiro tenha alguma dúvida dos procedimentos para publicar no GitHub Pages.","2018-07-03T21:03:49Z",false,"APPROVED"
+"edersoares","MEMBER","Solicitei uma alteração que não tem haver com PSR-2, apenas um ""facilitador"" para quem usa IDEs poder navegar entre arquivos. Ficou ótimo por mim!","2018-07-03T17:12:54Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-07-03T17:21:10Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-03T14:52:57Z",false,"COMMENTED"
+"tembra","CONTRIBUTOR","","2018-07-03T15:04:42Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-07-03T15:22:08Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-03T16:40:13Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-07-03T17:00:33Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-03T17:19:23Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-07-03T17:27:33Z",false,"CHANGES_REQUESTED"
+"tembra","CONTRIBUTOR","","2018-07-03T18:11:59Z",false,"COMMENTED"
+"tembra","CONTRIBUTOR","","2018-07-03T18:35:16Z",false,"COMMENTED"
+"tembra","CONTRIBUTOR","","2018-07-03T18:41:41Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-03T19:15:40Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-07-03T19:28:53Z",false,"COMMENTED"
+"tembra","CONTRIBUTOR","","2018-07-03T19:32:58Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-03T20:08:03Z",false,"COMMENTED"
+"tembra","CONTRIBUTOR","","2018-07-03T22:15:59Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Solicito revisão","2018-07-09T13:38:34Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-09T14:44:17Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-07-09T16:00:33Z",false,"COMMENTED"
+"tembra","CONTRIBUTOR","","2018-07-09T18:24:31Z",false,"COMMENTED"
+"Bonot","CONTRIBUTOR","","2018-07-09T18:38:00Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-07-09T18:57:15Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Tenho uma suspeita a respeito do PR, se este pacote engloba o que necessitamos. Acredito que seja o Symfony completo","2018-07-01T18:47:12Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Solicito revisão","2018-07-02T11:27:28Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-29T20:41:53Z",false,"APPROVED"
+"Bonot","CONTRIBUTOR","","2018-06-29T18:12:26Z",false,"APPROVED"
+"edersoares","MEMBER","Vamos discutir sobre as alterações feitas e entender o que podemos melhorar antes de fazer o merge.","2018-06-29T13:25:24Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-06-29T13:44:49Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-06-29T13:46:49Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-06-29T13:48:49Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-06-29T13:50:56Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-29T13:56:02Z",false,"COMMENTED"
+"munizeverton","CONTRIBUTOR","","2018-07-11T22:46:06Z",false,"APPROVED"
+"fernandosjp","CONTRIBUTOR","Acho bem legal ter os badges. Já funciona de atalho para o Scrutinizer. Só de sugestão, talvez colocaria até os outros badges do scrutnizer (build e code coverage no futuro). O que acha @farribeiro?
+
+[![Latest Release](https://img.shields.io/github/release/portabilis/i-educar.svg?label=latest%20release)](https://github.com/portabilis/i-educar/releases)
+[![Build Status](https://scrutinizer-ci.com/g/portabilis/i-educar/badges/build.png?b=master)](https://scrutinizer-ci.com/g/portabilis/i-educar/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/portabilis/i-educar/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/portabilis/i-educar/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/portabilis/i-educar/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/portabilis/i-educar/?branch=master)","2018-06-29T12:32:41Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Solicito review","2018-07-01T18:51:14Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Solicito review","2018-07-07T01:44:18Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Solicito review","2018-08-10T23:37:56Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-08-14T17:14:29Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-06-21T21:42:35Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-22T13:20:51Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","","2018-06-22T13:39:45Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Solicito review e/ou aprovação","2018-07-01T18:53:20Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","A execução não funcionou muito bem tem diversos docblocks que foram adicionados definindo os parâmetros apenas definiu o primeiro parâmetro da função/método é melhor este tipo de trabalhar ser feito por partes como descrito na issue 265","2018-06-22T13:26:33Z",false,"CHANGES_REQUESTED"
+"williamespindola","CONTRIBUTOR","","2018-06-21T00:34:33Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-21T00:37:14Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-22T13:27:09Z",false,"APPROVED"
+"eberfreitas","CONTRIBUTOR","","2018-06-23T03:32:59Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Solicito review","2018-07-01T18:53:54Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:10:58Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:11:16Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:11:37Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:11:49Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:11:57Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:12:02Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:12:10Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:12:16Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:12:22Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:12:58Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:13:08Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:13:24Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:13:29Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:13:41Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:13:47Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:13:55Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:14:02Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:14:09Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:14:24Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:14:29Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:14:45Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:14:54Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:15:00Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:15:06Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:15:14Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:15:19Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:15:23Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-19T15:15:30Z",false,"COMMENTED"
+"edersoares","MEMBER","Há muitas formatações inadequadas, pontuei algumas, quem for aplicar o style code deverá utilizar a ferramenta para formatar automaticamente, mas também deverá validar se a mesma ficou correta antes de abrir o PR.","2018-06-19T15:16:37Z",false,"CHANGES_REQUESTED"
+"williamespindola","CONTRIBUTOR","Não vejo necessidade nenhuma em adicionar isto","2018-06-17T16:15:42Z",false,"CHANGES_REQUESTED"
+"williamespindola","CONTRIBUTOR","Não entendi a necessidade deste script, o docker-composer ja faz este trabalho e estamos usando docker. ","2018-06-17T16:21:33Z",false,"CHANGES_REQUESTED"
+"williamespindola","CONTRIBUTOR","Este arquivo .env não precisa nem existir pode ir para o docker-compose.yml assim:
+```
+    environment:
+        CORE_EXT_CONFIGURATION_ENV: development
+        XDEBUG_IDEKEY: xdebug
+        XDEBUG_REMOTE_HOST: 127.0.0.1
+        XDEBUG_REMOTE_PORT: 9000
+        XDEBUG_REMOTE_ENABLE: 1
+```
+@edersoares teve algum motivo porque criou o arquivo?
+
+o .conf faz sentido ficar junto das cosas do docker, pois sobe durante o setup. 
+
+o do phinx ja é uma questão de gosto mesmo, normalmente coloco na raiz porque não preciso especificar o caminho na hora de executar, ou junto com as migrations.","2018-06-17T16:40:46Z",false,"CHANGES_REQUESTED"
+"munizeverton","CONTRIBUTOR","@williamespindola o `.env` foi criado pra permitir alterar as configurações do xdebug, que podem variar de uma máquina pra outra. Acho que faria sentido ter ele na pasta docker também
+
+Acho que o `.conf` realmente deveria estar na pasta do docker
+
+Já o `phinx.php` está na raiz realmente por isso. Facilitar o uso das migrations
+
+@farribeiro Acredito que faça sentido mover somente o `ieducar.conf`","2018-06-17T20:53:31Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#sort-multi-line-arguments","2018-06-16T14:18:51Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-15T21:01:55Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Eu acreditava que mesmo sem o protocolo ele ia tranquilamente. Aceito alterações","2018-06-15T14:26:08Z",false,"APPROVED"
+"williamespindola","CONTRIBUTOR","Não há necessidade de um outro docker file para o banco. Comentei o porque na issue onde isto esta [issue sendo discutido](https://github.com/portabilis/i-educar/issues/244#issuecomment-397678437)","2018-06-15T16:46:32Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-14T16:56:33Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-13T23:27:42Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T23:30:42Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","Apenas remove a linha 3 `- tests/*`","2018-06-14T08:39:26Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","Isso tá ficando bem legal. Animado pra ver as mudanças em decorrência desses ajustes :D","2018-06-13T02:38:49Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T02:40:55Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-13T04:04:47Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-13T04:16:59Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T08:46:49Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-13T12:31:24Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-13T12:31:47Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T17:14:09Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","Apenas o composer.json para fechar","2018-06-14T01:56:46Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-14T02:43:30Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-17T14:07:44Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","Ajustei o que precisava. Esta configrado e rodando.
+Execute `ieducar/vendor/bin/php-cs-fixer --diff --dry-run --verbose fix` para ver o diff do que precisa ser resolvido e `ieducar/vendor/bin/php-cs-fixer fix` para resolver.","2018-06-17T16:13:40Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-19T10:10:27Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-06-21T13:19:40Z",false,"CHANGES_REQUESTED"
+"williamespindola","CONTRIBUTOR","","2018-06-22T13:10:43Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-23T02:59:11Z",false,"APPROVED"
+"williamespindola","CONTRIBUTOR","","2018-06-23T03:06:59Z",false,"APPROVED"
+"edersoares","MEMBER","","2018-06-29T13:39:53Z",false,"COMMENTED"
+"edersoares","MEMBER","","2018-06-29T13:41:29Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","Solicito novo review","2018-06-29T13:46:35Z",false,"COMMENTED"
+"edersoares","MEMBER","@farribeiro estamos quase chegando lá, apenas solicito que você execute `composer update` e faça commit do `composer.lock` novamente. Eu baixei o seu branch e o mesmo está acusando o uso `fabpot/php-cs-fixer` que está presente no composer.lock. Esta biblioteca está abandonada e seu uso é desencorajado.
+
+Obrigado.","2018-06-29T16:26:08Z",false,"CHANGES_REQUESTED"
+"edersoares","MEMBER","","2018-06-29T19:12:17Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Estava a gerar ambiente para a atualização do `composer.lock`","2018-06-29T19:12:40Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T14:53:18Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","Ótimo!","2018-06-10T18:32:20Z",false,"APPROVED"
+"williamespindola","CONTRIBUTOR","Gostei bastante, ele tem um caráter bem humano e informativo, o contrário do que eu propus que foi 100% técnico. :D 
+Mas senti falta de pontos técnicos, vou lista-los abaixo:
+- Release Cycle ou Semver. Esta em definição ainda seu sei, mas não é informado aqui;
+- Testes, sei que ainda não temos uma boa cobertura, mas se alguém vai contribuir precisa saber que precisa colocar, será uma condição sine qua non para seu PR ser aceito. E também nos polpa tempo no review, pois garante a funcionalidade.
+- Não informa sobre documentação, se alguém adicionar uma feature nova precisa documentar isto.
+- Um pull request por feature - Se você quiser fazer mais de uma coisa, envie várias pull requests.
+-  Se você tivesse que fazer vários commits intermediários enquanto desenvolvendo, or favor [execute um squash](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) antes de submeter. Com isto não vão precisar perguntar como fazer.
+
+É isto, parabéns pelo trabalho, vamos em frente \o/","2018-06-11T00:10:28Z",false,"CHANGES_REQUESTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T01:32:49Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T01:33:21Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T01:34:35Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T01:35:30Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:40:52Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:42:45Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:44:21Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:45:14Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:46:37Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:47:17Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-11T01:48:49Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T02:04:25Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T02:05:18Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Quero um PR cosmético... Quebra de linhas a 80 colunas para os `.md` e `.txt` pois facilita o diff","2018-06-11T02:34:55Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T02:42:13Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-11T11:56:16Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-08T23:06:43Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-09T00:43:25Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-09T21:37:32Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-09T22:03:44Z",false,"COMMENTED"
+"rodrigogbgod","CONTRIBUTOR","","2018-06-08T20:14:30Z",false,"APPROVED"
+"williamespindola","CONTRIBUTOR","Não entendi o que este PR resolve, esta permissão esta causando algum problema para a aplicação executar ou acessar algum arquivo?","2018-06-09T02:23:01Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","Removido conflitos","2018-06-11T02:18:35Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T14:51:46Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-11T14:57:06Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T15:02:25Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-11T18:21:32Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","Para revisão","2018-06-07T23:57:18Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-08T02:22:00Z",false,"APPROVED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-09T21:52:50Z",false,"CHANGES_REQUESTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-09T21:55:09Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-11T00:24:32Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","","2018-06-11T00:25:27Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","@farribeiro bora separar este Pr em partes diferentes? O de contributing vamos deixar para o #219 eu ja levantei o que enviamos neste relacionado a contributing que esta faltando la. E o de la ficou melhor que o meu, o meu ficou muito técnico.
+
+Acho que podemos separar em 2:
+- Adiciona code sniffer, adicionando o arquivo de configuração `.php_cs` e o `composer.json`
+- Configura scrutinizer, apenas o arquivo `.scrutinizer.yml`
+
+Vamos apenas definir as questões que o @MarceloCajueiro levantou ali e enviar os PRs.","2018-06-11T00:27:13Z",false,"CHANGES_REQUESTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-11T01:02:29Z",false,"COMMENTED"
+"williamespindola","CONTRIBUTOR","Esta faltando os arquivos de configuração do travis e também do scrutinizer mencionados na task #208 
+E também nenhum deles precisa de docker para rodar os testes vide links de exemplo que coloquei na task.","2018-06-08T02:37:42Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","Será que é o suficiente? https://docs.travis-ci.com/user/docker/","2018-06-09T11:25:02Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#sort-multi-line-arguments","2018-06-06T21:37:21Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","Comentários :)","2018-06-07T15:55:07Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T15:59:18Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T16:07:42Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T18:56:25Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T18:56:30Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T19:02:04Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T19:06:43Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T19:07:33Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T19:09:23Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T19:09:31Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T19:10:40Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T19:19:27Z",false,"COMMENTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T19:22:45Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T19:38:43Z",false,"COMMENTED"
+"nawarian","NONE","","2018-06-07T19:53:01Z",false,"COMMENTED"
+"nawarian","NONE","","2018-06-07T19:55:11Z",false,"COMMENTED"
+"nawarian","NONE","","2018-06-07T20:00:35Z",false,"CHANGES_REQUESTED"
+"eberfreitas","CONTRIBUTOR","","2018-06-07T20:04:28Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T20:06:59Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T20:17:16Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-07T20:29:54Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-08T13:06:34Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-08T13:43:57Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-08T18:10:42Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-08T18:16:12Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-12T13:18:11Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-13T12:17:57Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-13T12:18:47Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-13T12:19:33Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-13T12:20:29Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T16:39:09Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T16:39:47Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T16:45:07Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T16:52:27Z",false,"COMMENTED"
+"farribeiro","CONTRIBUTOR","","2018-06-13T17:07:31Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","Comentários feitos.","2018-06-07T13:57:40Z",false,"CHANGES_REQUESTED"
+"farribeiro","CONTRIBUTOR","Requisito review","2018-06-07T23:45:02Z",false,"COMMENTED"
+"MarceloCajueiro","CONTRIBUTOR","","2018-06-09T15:31:24Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Pode aplicar o Merge tranquilamente","2018-06-06T19:23:58Z",false,"APPROVED"
+"nawarian","NONE","","2018-06-07T11:14:42Z",false,"APPROVED"
+"farribeiro","CONTRIBUTOR","Troca do email vide PR https://github.com/portabilis/i-educar/pull/202#issuecomment-395830444","2018-06-08T17:29:25Z",false,"CHANGES_REQUESTED"
